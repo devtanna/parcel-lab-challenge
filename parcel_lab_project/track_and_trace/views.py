@@ -8,13 +8,13 @@ from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
 
 from .models import Shipment
-from .serializers import ShipmentDetaiRequestlSerializer
+from .serializers import ShipmentDetailRequestSerializer
 from .services.weather.open_weather_map import OpenWeatherMapProvider
 
 
 class ShipmentDetailsView(viewsets.ViewSet):
     model = Shipment
-    serializer_class = ShipmentDetaiRequestlSerializer
+    serializer_class = ShipmentDetailRequestSerializer
     weather_provider = OpenWeatherMapProvider
 
     @method_decorator(ratelimit(key=settings.RATE_LIMITER_KEY, rate=settings.RATE_LIMITER_RATE, method='GET'), name='shipment_retrieve')

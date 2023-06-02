@@ -6,7 +6,7 @@ TRACKING_NUMBER_MAX_LENGTH = 32
 CARRIER_MIN_LENGTH = 3
 CARRIER_MAX_LENGTH = 32
 
-class ShipmentDetaiRequestlSerializer(serializers.Serializer):
+class ShipmentDetailRequestSerializer(serializers.Serializer):
     weather_units = serializers.ChoiceField(
         choices=['imperial', 'standard', 'metric'],
         required=False

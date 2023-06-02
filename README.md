@@ -39,12 +39,19 @@
 ```shell
 curl http://127.0.0.1:8000/api/shipment-details/?tracking_number=TN12345682&carrier=gls&weather_units=metric | json_pp
 ```
-- The endpoint is rate limited to `1000 requests / h` per `ip` which can be configured in settings. 
+Notes:
+- The endpoint is rate limited to `1000 requests / h` per `ip` which can be configured in settings.
+- Allowed values for weather_units parameter: `metric`, `imperial`, `standard`
 
 
 ## Development Workflow
 ### Code Quality Checks
 To perform code quality checks, run the following commands:
+
+*pytest*: Run tests.
+``` shell
+pytest
+```
 
 *Ruff*: An extremely fast Python linter, written in Rust.
 ``` shell

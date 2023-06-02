@@ -2,6 +2,7 @@
 .parcel_lab_cache
 .ruff_cache/
 .mypy_cache/
+.pytest_cache/
 
 # Byte-compiled / optimized Python files
 __pycache__/
