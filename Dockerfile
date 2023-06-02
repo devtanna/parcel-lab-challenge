@@ -29,4 +29,4 @@ EXPOSE 8000
 ENV DJANGO_SETTINGS_MODULE=parcel_lab_project.settings
 
 # Start the Gunicorn server
-CMD ["gunicorn", "parcel_lab_project.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "parcel_lab_project.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4"]
