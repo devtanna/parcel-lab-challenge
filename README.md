@@ -1,6 +1,6 @@
 # Parcel Lab Project
 
-## Project Setup
+## Project setup using manage.py - See below for Docker setup
 
 1. Clone the repository:
     ```shell
@@ -34,6 +34,22 @@
     python manage.py runserver
     ```
     The server will start running on http://127.0.0.1:8000/.
+
+## Project setup using Docker
+1. Clone the repository:
+    ```shell
+    git clone <repository-url>
+    ```
+
+2. Build it:
+    ``` shell
+    docker build -t parcellab-challenge .
+    ```
+
+3. Run it:
+    ``` shell
+    docker run -p 8000:8000 parcellab-challenge
+    ```
 
 ## Usage
 ```shell

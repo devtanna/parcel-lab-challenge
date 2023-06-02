@@ -11,7 +11,7 @@ class OpenWeatherMapProvider(CachedWeatherProviderBase):
     @classmethod
     def fetch_weather_data(cls, location, units) -> dict:
             # first convert the location to lat/lon
-            logger.info("Fetching lat/lon data from OpenCageData for location {location}")
+            logger.info(f"Fetching lat/lon data from OpenCageData for location {location}")
             geocoding_url = f'{settings.OPENCAGE_API_URL}?q={location}&key={settings.OPENCAGE_API_KEY}'
             response = requests.get(geocoding_url)
             geocoding_data = response.json()
