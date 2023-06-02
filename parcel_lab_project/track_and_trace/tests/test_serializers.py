@@ -3,6 +3,7 @@ from django.utils.translation import gettext as _
 
 from track_and_trace.serializers import ShipmentDetailRequestSerializer
 
+
 @pytest.fixture
 def serializer():
     return ShipmentDetailRequestSerializer
@@ -68,4 +69,4 @@ def test_invalid_carrier(serializer):
     serializer_instance = serializer(data=data)
     assert serializer_instance.is_valid() is False
     assert 'carrier' in serializer_instance.errors
-    assert serializer_instance.errors['carrier'][0] == _('Carrier can only contain alphanumeric characters.')
+    assert serializer_instance.errors['carrier'][0] == _("Carrier cannot contain special characters like '@', '#', '$', or '%'")

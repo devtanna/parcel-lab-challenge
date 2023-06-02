@@ -37,7 +37,7 @@
 
 ## Usage
 ```shell
-curl http://127.0.0.1:8000/api/shipment-details/?tracking_number=TN12345682&carrier=gls&weather_units=metric | json_pp
+curl http://127.0.0.1:8000/api/track-shipment/?tracking_number=TN12345682&carrier=gls&weather_units=metric | json_pp
 ```
 Notes:
 - The endpoint is rate limited to `1000 requests / h` per `ip` which can be configured in settings.

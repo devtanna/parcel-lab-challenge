@@ -1,8 +1,7 @@
+from django.conf import settings
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
 from django_ratelimit.decorators import ratelimit
-from django.conf import settings
-
 from rest_framework import status, viewsets
 from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
@@ -52,7 +51,7 @@ class ShipmentDetailsView(viewsets.ViewSet):
                 'quantity': shipment.article.quantity,
                 'price': shipment.article.price,
                 'sku': shipment.article.sku,
-                'weather': weather_data,                
+                'weather': weather_data,
             })
 
         return Response({"shipments": shipment_details}, status=status.HTTP_200_OK)

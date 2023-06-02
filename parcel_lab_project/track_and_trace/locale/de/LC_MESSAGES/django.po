@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-02 09:36+0200\n"
+"POT-Creation-Date: 2023-06-02 14:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,6 +32,7 @@ msgstr ""
 
 #: parcel_lab_project/track_and_trace/serializers.py:22
 #: parcel_lab_project/track_and_trace/serializers.py:23
+#: parcel_lab_project/track_and_trace/tests/test_serializers.py:39
 msgid "Tracking number is required."
 msgstr ""
 
@@ -42,22 +43,24 @@ msgstr ""
 
 #: parcel_lab_project/track_and_trace/serializers.py:33
 #, python-brace-format
-msgid "Carrier cannot ex ceed {CARRIER_MAX_LENGTH} characters."
+msgid "Carrier cannot exceed {CARRIER_MAX_LENGTH} characters."
 msgstr ""
 
 #: parcel_lab_project/track_and_trace/serializers.py:34
 #: parcel_lab_project/track_and_trace/serializers.py:35
+#: parcel_lab_project/track_and_trace/tests/test_serializers.py:50
 msgid "Carrier is required."
 msgstr ""
 
 #: parcel_lab_project/track_and_trace/serializers.py:41
+#: parcel_lab_project/track_and_trace/tests/test_serializers.py:61
 msgid "Tracking number can only contain alphanumeric characters."
 msgstr ""
 
-#: parcel_lab_project/track_and_trace/serializers.py:46
-msgid "Carrier can only contain alphanumeric characters."
+#: parcel_lab_project/track_and_trace/tests/test_serializers.py:72
+msgid "Carrier cannot contain special characters like '@', '#', '$', or '%'"
 msgstr ""
 
-#: parcel_lab_project/track_and_trace/views.py:35
+#: parcel_lab_project/track_and_trace/views.py:34
 msgid "Shipment not found."
 msgstr ""

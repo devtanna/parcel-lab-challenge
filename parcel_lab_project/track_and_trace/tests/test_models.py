@@ -1,5 +1,6 @@
 import pytest
-from track_and_trace.models import Carrier, Address, Article, Shipment
+
+from track_and_trace.models import Address, Article, Carrier, Shipment
 
 
 @pytest.mark.django_db

@@ -30,7 +30,7 @@ class ShipmentDetailRequestSerializer(serializers.Serializer):
         allow_null=False,
         error_messages={
             'min_length': _(f'Carrier must be at least {CARRIER_MIN_LENGTH} characters long.'),
-            'max_length': _(f'Carrier cannot ex ceed {CARRIER_MAX_LENGTH} characters.'),
+            'max_length': _(f'Carrier cannot exceed {CARRIER_MAX_LENGTH} characters.'),
             'blank': _('Carrier is required.'),
             'null': _('Carrier is required.'),
         }
@@ -41,7 +41,7 @@ class ShipmentDetailRequestSerializer(serializers.Serializer):
             raise serializers.ValidationError(_('Tracking number can only contain alphanumeric characters.'))
         return value
 
-    def validate_carrier(self, value) -> str:
-        if not value.isalnum():
-            raise serializers.ValidationError(_('Carrier can only contain alphanumeric characters.'))
+    def validate_carrier(self, value):
+        if any(char in value for char in ['@', '#', '$', '%']):
+            raise serializers.ValidationError("Carrier cannot contain special characters like '@', '#', '$', or '%'")
         return value
