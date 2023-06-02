@@ -1,0 +1,47 @@
+# Cache files
+.parcel_lab_cache
+.ruff_cache/
+.mypy_cache/
+
+# Byte-compiled / optimized Python files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environment
+venv/
+.env/
+
+# Development and debugging files
+*.bak
+*.swp
+.vscode/
+pydevproject.xml
+
+# Database files
+*.sqlite3
+
+# Static files
+/staticfiles/
+
+# Media files
+/media/
+
+# Logs
+*.log
+
+# Ignore local settings file
+local_settings.py
+
+# Ignore environment variables file
+.env
+
+# .DS
+.DS_STORE
