@@ -41,12 +41,14 @@
     git clone <repository-url>
     ```
 
-2. Build it:
+2. Set `OPEN_WEATHER_API_KEY` and `OPENCAGE_API_KEY` api keys in `local_settings.py` using the provided `local_settings.template`
+
+3. Build it:
     ``` shell
     docker build -t parcellab-challenge .
     ```
 
-3. Run it:
+4. Run it:
     ``` shell
     docker run -p 8000:8000 parcellab-challenge
     ```
