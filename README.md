@@ -24,14 +24,19 @@ python manage.py runserver
     pip install -r requirements-dev.txt
     ```
 
-4. Database Migration & fixures
+4. Navigate to project folder
+    ```shell
+    cd parcel_lab_project
+    ```
+
+5. Database Migration & fixures
     ```shell
     python manage.py migrate
     python manage.py seed_shipments track_and_trace/fixtures/seed.csv
     ```
-5. Set `OPEN_WEATHER_API_KEY` and `OPENCAGE_API_KEY` api keys in `local_settings.py` using the provided `local_settings.template`
+6. Set `OPEN_WEATHER_API_KEY` and `OPENCAGE_API_KEY` api keys in `local_settings.py` using the provided `local_settings.template`
 
-5. Run the Development Server
+7. Run the Development Server
     ```shell    
     python manage.py runserver
     ```
