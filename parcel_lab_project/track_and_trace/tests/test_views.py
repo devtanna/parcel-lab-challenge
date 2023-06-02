@@ -6,7 +6,6 @@ from django.shortcuts import resolve_url
 from rest_framework import status
 from rest_framework.exceptions import NotFound, ValidationError
 from rest_framework.test import APIRequestFactory
-
 from track_and_trace.models import Address, Article, Carrier, Shipment
 from track_and_trace.views import ShipmentDetailsView
 

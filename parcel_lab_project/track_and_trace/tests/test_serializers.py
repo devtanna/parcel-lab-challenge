@@ -1,6 +1,5 @@
 import pytest
 from django.utils.translation import gettext as _
-
 from track_and_trace.serializers import ShipmentDetailRequestSerializer
 
 

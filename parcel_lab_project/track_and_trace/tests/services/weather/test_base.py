@@ -1,6 +1,5 @@
 import pytest
 from django.core.cache import cache
-
 from track_and_trace.services.weather.base import (CachedWeatherProviderBase,
                                                    CacheMixin,
                                                    WeatherProviderBase)

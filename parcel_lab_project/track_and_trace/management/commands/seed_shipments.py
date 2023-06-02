@@ -1,7 +1,6 @@
 import csv
 
 from django.core.management.base import BaseCommand
-
 from track_and_trace.models import Address, Article, Carrier, Shipment
 
 

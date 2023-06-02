@@ -1,5 +1,4 @@
 import pytest
-
 from track_and_trace.models import Address, Article, Carrier, Shipment
 
 
