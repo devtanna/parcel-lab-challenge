@@ -25,7 +25,7 @@ RUN python manage.py seed_shipments track_and_trace/fixtures/seed.csv
 # Expose the port on which the application will run
 EXPOSE 8000
 
-# Set environment variables (if needed)
+# Set environment variables
 ENV DJANGO_SETTINGS_MODULE=parcel_lab_project.settings
 
 # Start the Gunicorn server
